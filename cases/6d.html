@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        The Ministry of Fundamental Principles
+    </title>
+       <meta charset="utf-8">
+       <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        </style>
+</head>
+
+<body>
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<div id="info">
+<script>
+$('#info').click(function(){
+    $('#info').animate({height:'300'})
+})</script>
+</div>
+
+<div id="box1">
+<h1>A<br></h1>
+
+
+</div>
+
+<!--TEKSTJE SCHRIJVEN OVER WIE GEWONNEN HEEFT-->
+
+<div id="box2">
+<h3><span style="color: blue;">De rechtbank,
+verklaart niet wettig en overtuigend bewezen dat de verdachte de bij gewijzigde dagvaarding onder 1, 2, 3 en 4 ten laste gelegde feiten heeft begaan en spreekt de verdachte daarvan vrij.</span>
+De <span style="color: blue;">verdachte</span> heeft iedere betrokkenheid bij het onder 4 ten laste gelegde ontkend. Het dossier bevat geen bewijsmiddelen waaruit blijkt dat hij in het bezit is geweest van een cd waarop de uitlating "<i>kutmarokkanen</i>" valt te horen en evenmin blijkt dat hij een dergelijke cd op enig moment zou hebben verspreid of op voorraad zou hebben gehad met als doel om deze te verspreiden.
+
+</h3>
+
+
+<h2><a href="javascript:history.back()">Terug</a> </h2>
+</div>
+
+
+<script>
+var $p = $('h3'),
+    $cover = $('.cover'),
+    width = $p.width(),
+    decrement = width / $p.text().length;
+
+function addChar()
+{
+    $cover.css('width', '-=' + decrement);
+
+    if ( parseInt( $cover.css('width') ) < width )
+    {
+        setTimeout(addChar, 10);
+    }
+}
+
+addChar();
+</script>
+
+
+<div id="box3">
+<h1>B<br></h1>
+
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+        $(window).on('load', function() { // makes sure the whole site is loaded
+            $('#status'); // will first fade out the loading animation
+            $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(1000).css({'overflow':'visible'});
+        })
+    //]]>
+</script>
+</body>
+</html>

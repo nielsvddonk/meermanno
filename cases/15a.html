@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+	<title>
+		The Ministry of Fundamental Principles
+	</title>
+	   <meta charset="utf-8">
+	   <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+
+
+<body>
+
+<!--BEROEP, RELATE IN KLAGER/BEKLAAGDE VERANDEREN, VERGEET NIET CONSTANT TE DOEN BIJ IEDERE PAGINA-->
+<!--HOUD REKENING MET SPAN STYLE COLORS, GEBRUIK <span style="color: blue;"> OF <span style="color: #d8ff00;">-->
+
+<div id="box1">
+<h1>A<br></h1>
+<p>Beroeps:<br><i>Burger</i><br><br>
+    Relatie:<br><i>Poster</i><br><br>
+    Klager/Bekaagde:<br><i>Beklaagde</i></p>
+</div>
+
+<div id="box2">
+<h3>De <span style="color: #d8ff00;">beklaagde</span> wordt verdacht van het opzettelijk, in het openbaar mondeling beledigen van een politicus in tv programma Barend en Van Dorp.
+<span class="cover"></span></h3>
+
+<h2><a href="javascript:history.back()"><<</a> <a href="15b.html">>><br>&#10230</a></h2>
+</div>
+
+
+<script>
+var $p = $('h3'),
+    $cover = $('.cover'),
+    width = $p.width(),
+    decrement = width / $p.text().length;
+
+function addChar()
+{
+    $cover.css('width', '-=' + decrement);
+
+    if ( parseInt( $cover.css('width') ) < width )
+    {
+        setTimeout(addChar, 10);
+    }
+}
+
+addChar();
+</script>
+
+
+<div id="box3">
+<h1>B<br></h1>
+<p>Beroeps:<br><i>Politicus</i><br><br>
+	Relatie:<br><i>Slachtoffer</i><br><br>
+	Klager/Beklaagde:<br><i>Klager</i></p>
+</div>
+
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+        $(window).on('load', function() { // makes sure the whole site is loaded
+            $('#status'); // will first fade out the loading animation
+            $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(1000).css({'overflow':'visible'});
+        })
+    //]]>
+</script>
+</body>
+</html>

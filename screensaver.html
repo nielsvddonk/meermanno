@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>RIP CURSOR</title>
+<link rel="stylesheet" type="text/css" href="stylesheetCONCHA.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="floatscreen">
+<div id="floating1">
+    <p>7</p>
+
+</div>
+<div id="floating2">
+    <p>1</p>
+</div>
+</div>
+<div id="textscreen">
+
+<p>
+<script>
+var texts = ["SNOBISTISCH STEL ENGERDS", "KOTSEND STEDENTENMEISJE","DE BEERPUT","VARKENSKOP","IK BEN GEEN HOMO","LAAT ZE LEKKER AFSTERVEN","RACIST","DIKKE RACIST","ANTI-JODENNEUSSTICKER","RACISTISCHE THREAD","DIKKONTIG STUK NAZISCHIJT","KOULA KANKER FLIKKERS","MAFKEES","LAMLUL","NEONAZI","AGRESSIEVE HOMOFIELEN","DISCRIMINATIE PROBLEMEN","A.C.A.B","Breng de muis naar één van de nummers"];
+var count = 0;
+function changeText() {
+    $("#textscreen").text(texts[count]);
+    count < 26 ? count++ : count = 0;
+}
+setInterval(changeText, 1000);
+document.getElementById("textscreen").style.color = "#d8ff00";
+document.getElementById("textscreen").style.fontSize = "100px";
+document.getElementById("textscreen").style.fontFamily = "body";
+document.getElementById("textscreen").style.textAlign = "center";
+document.getElementById("textscreen").style.padding = "400px 0px 0px 0px";
+document.getElementById("textscreen").style.position = "absolute";
+</script></p>
+</div><
+<script language="javascript">
+$(document).ready(function() {
+    animateDiv($('#floating1'));
+    animateDiv($('#floating2'));
+
+});
+
+function makeNewPosition($container) {
+
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $container.height() - 20;
+    var w = $container.width() - 0;
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh, nw];
+
+}
+
+function animateDiv($target) {
+    var newq = makeNewPosition($target.parent());
+    var oldq = $target.offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+    $target.animate({
+        top: newq[0],
+        left: newq[1]
+    }, speed, function() {
+        animateDiv($target);
+    });
+
+};
+
+function calcSpeed(prev, next) {
+
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+
+    var greatest = x > y ? x : y;
+
+    var speedModifier = 0.2;
+
+    var speed = Math.ceil(greatest / speedModifier);
+
+    return speed;
+
+}
+</script></body>
+</body>
+</html>

@@ -19,7 +19,7 @@
 
 <p>
 <script>
-var texts = ["SNOBISTISCH STEL ENGERDS", "KOTSEND STEDENTENMEISJE","DE BEERPUT","VARKENSKOP","IK BEN GEEN HOMO","LAAT ZE LEKKER AFSTERVEN","RACIST","DIKKE RACIST","ANTI-JODENNEUSSTICKER","RACISTISCHE THREAD","DIKKONTIG STUK NAZISCHIJT","KOULA KANKER FLIKKERS","MAFKEES","LAMLUL","NEONAZI","AGRESSIEVE HOMOFIELEN","DISCRIMINATIE PROBLEMEN","A.C.A.B","Breng de muis naar één van de nummers"];
+var texts = ["SNOBISTISCH STEL ENGERDS", "KOTSEND STEDENTENMEISJE","DE BEERPUT","VARKENSKOP","IK BEN GEEN HOMO","LAAT ZE LEKKER AFSTERVEN","RACIST","DIKKE RACIST","ANTI-JODENNEUSSTICKER","RACISTISCHE THREAD","DIKKONTIG STUK NAZISCHIJT","KOULA KANKER FLIKKERS","MAFKEES","LAMLUL","NEONAZI","AGRESSIEVE HOMOFIELEN","DISCRIMINATIE PROBLEMEN","A.C.A.B","Breng de muis naar één van de blinkers"];
 var count = 0;
 function changeText() {
     $("#textscreen").text(texts[count]);
@@ -28,9 +28,11 @@ function changeText() {
 setInterval(changeText, 1000);
 document.getElementById("textscreen").style.color = "#d8ff00";
 document.getElementById("textscreen").style.fontSize = "100px";
-document.getElementById("textscreen").style.fontFamily = "body";
+document.getElementById("textscreen").style.fontSize = "100px";
+document.getElementById("textscreen").style.fontStyle = "italic";
 document.getElementById("textscreen").style.textAlign = "center";
-document.getElementById("textscreen").style.padding = "400px 0px 0px 0px";
+document.getElementById("textscreen").style.paddingTop = "400px";
+document.getElementById("textscreen").style.marginLeft = "-35px";
 document.getElementById("textscreen").style.position = "absolute";
 </script></p>
 </div><

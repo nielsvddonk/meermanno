@@ -22,12 +22,12 @@ body {
 	width: 20%;
 	height: 800px;
 	border-bottom: solid 1px black;
+	margin-top:-13px;
 }
 
 #box1 h1 {
 
-  padding-top: 10px;
-	margin-top: -5px;
+  padding-top: 5px;
 	text-align: center;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -55,7 +55,8 @@ body {
 }
 
 #box2 h3 {
-  margin-top: 45px;
+		overflow: hidden;
+  margin-top: 60px;
   line-height: 45px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -73,9 +74,9 @@ body {
 
 #box2 h2 {
   line-height: 35px;
-	margin-left: 20px;
+	margin-left: -20px;
 	margin-right: 20px;
-	padding-top: 500px;
+	padding-top: 700px;
 	color: white;
 	font-family: "body";
 	font-size: 40px;
@@ -87,9 +88,22 @@ body {
 #box2 a {
 text-decoration: none;
 color: white;
+padding-left: 30px;
 }
 
-#box2 a:hover {
+#answera {
+	color: black;
+}
+
+#answera:hover {
+	color: blue;
+}
+
+#answerb:hover {
+	color:#d8ff00;
+}
+
+#box2 h2 a:hover {
 color:#d8ff00;
 }
 
@@ -97,12 +111,12 @@ color:#d8ff00;
 	float: left;
 	width: 20%;
 	height: 800px;
-  overflow-y: auto;
+	border-bottom: solid 1px black;
+	margin-top:-13px;
 }
 
 #box3 h1 {
-  padding-top: 10px;
-	margin-top: -5px;
+  padding-top: 5px;
 	text-align: center;
 	margin-left: 20px;
 	margin-right: 20px;
